@@ -5,18 +5,19 @@ import styled from 'styled-components';
 const Wrapper = styled.div`
   max-width: 700px;
   margin: 0 auto;
+  color: #f7d494;
+  background-color: #205455;
 `;
 
 const IndexPage: NextPage<{}> = ({}) => {
   return (
     <Wrapper>
       <Head>
-        <title>NextJS Typescript Starter</title>
+        <title>Linnéa Ajger</title>
       </Head>
-      <h1>Opinionated NextJS Typescript starter</h1>
+      <h1>Portfolio</h1>
       <p>
-        This is my preferred starter template for building NextJS apps in
-        Typescript.
+        hejhejhej
       </p>
     </Wrapper>
   );
