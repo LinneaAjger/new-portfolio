@@ -1,25 +1,24 @@
 import React from 'react';
 import { useRouter } from 'next/router';
 import { AppProps } from 'next/app';
-import {ThemeProvider} from 'styled-components';
+import { ThemeProvider, DefaultTheme } from 'styled-components'
+import GlobalStyle from '../components/globalstyles'
 
-const theme = {
+const theme: DefaultTheme = {
   colors: {
-    header:'#4d4dec',
-    body: '#000000',
-    footer: '#b0636321'
-  } 
+    primary: '#eea0a0',
+    secondary: '#0070f3',
+  },
 }
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
   return (
     <ThemeProvider theme={theme}>
-  <>
-  This is _app
-  <Component {...pageProps} key={router.asPath} />
-  </>
-  </ThemeProvider>
+      <h1>linnea ajger</h1>
+    <GlobalStyle />
+      <Component {...pageProps} key={router.asPath} />
+    </ThemeProvider>
   )
 }
 
