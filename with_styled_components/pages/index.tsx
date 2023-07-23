@@ -1,5 +1,5 @@
+import NavBar from 'components/navbar';
 import { NextPage } from 'next';
-import Head from 'next/head';
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
@@ -12,13 +12,17 @@ const Wrapper = styled.div`
 const IndexPage: NextPage<{}> = ({}) => {
   return (
     <Wrapper>
-      <Head>
-        <title>Linnéa Ajger</title>
-      </Head>
       <h1>Portfolio</h1>
-      <p>
-        hejhejhej
-      </p>
+      <NavBar/>
+      <section id="projects">
+        <h1>projects</h1>
+      </section>
+      <section id="about-me">
+        <h1>about me</h1>
+      </section>
+      <section id="contact">
+        <h1>projects</h1>
+      </section>
     </Wrapper>
   );
 };
