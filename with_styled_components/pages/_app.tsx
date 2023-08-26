@@ -15,7 +15,6 @@ function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
   return (
     <ThemeProvider theme={theme}>
-      <h1>linnea ajger</h1>
     <GlobalStyle />
       <Component {...pageProps} key={router.asPath} />
     </ThemeProvider>
