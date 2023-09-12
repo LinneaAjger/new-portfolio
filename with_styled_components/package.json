@@ -9,9 +9,13 @@
     "what": "ECHO Package system: npm",
     "test": "jest",
     "test:watch": "jest --watch",
-    "lint": "next lint"
+    "lint": "next lint",
+    "generate-types-contentful": "dotenv -e .env.local -- npm run contentful-typegen",
+    "contentful-typegen": "cf-content-types-generator -g -s $CONTENTFUL_SPACE_ID -t $CONTENTFUL_MANAGEMENT_API_KEY -e master -X -o ./src/types/generated/contentful"
   },
   "dependencies": {
+    "@contentful/rich-text-html-renderer": "^16.1.2",
+    "cf-content-types-generator": "^2.12.2",
     "contentful": "^10.5.1",
     "next": "^13.1.6",
     "react": "^18.2.0",
@@ -25,6 +29,7 @@
     "@types/styled-components": "^5.1.26",
     "@typescript-eslint/eslint-plugin": "^5.37.0",
     "@typescript-eslint/parser": "^5.37.0",
+    "dotenv-cli": "^7.3.0",
     "eslint": "^8.23.1",
     "eslint-config-next": "^13.1.6",
     "eslint-plugin-jest": "^27.0.4",
